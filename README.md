@@ -1,6 +1,5 @@
-# pc
-
-> A Vue.js project
+# 基于vue vue-router vuex构建的单页面的燃气公司官网项目
+1.ui框架使用了vue-element
 
 ## Build Setup
 
