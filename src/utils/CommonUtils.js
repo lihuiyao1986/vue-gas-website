@@ -5,6 +5,10 @@ export default {
         vm.$router.push({name:'index'});
      }else if(menuCode == 8){
         window.open(WebSiteInfo.OnlineBusiServiceURL);
+     }else if(menuCode == 14){
+        vm.$router.push({name:'sites',query : {
+         timestamp : vm.moment(new Date()).format("YYYYMMDDHHmmssSSS")
+        }});
      }else if(menuCode == 15){
         vm.$router.push({name:'map',query : {
          timestamp : vm.moment(new Date()).format("YYYYMMDDHHmmssSSS")

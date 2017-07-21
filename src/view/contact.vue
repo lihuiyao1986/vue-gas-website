@@ -27,7 +27,9 @@
 
        },
        computed:{
-
+          timestamp(){
+            return this.moment(new Date()).format("YYYYMMDDHHmmssSSS")
+          }
        }
     }
 </script>

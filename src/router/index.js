@@ -6,6 +6,7 @@ import Detail from '@/view/detail'
 import WebsiteMap from '@/view/map'
 import Search from '@/view/search'
 import Contact from '@/view/contact'
+import Sites from '@/view/sites'
 
 Vue.use(Router)
 
@@ -41,6 +42,11 @@ const router = new Router({
       path : "/contact",
       name : "contact",
       component : Contact
+    },
+    {
+      path : "/sites",
+      name : "sites",
+      component : Sites
     }
   ]
 })
