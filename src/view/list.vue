@@ -14,7 +14,7 @@
             <p class="article-menu-name">{{tabs.currentMenuTitle}}</p>
             <el-breadcrumb separator="/">
               <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-              <el-breadcrumb-item v-for="item of tabs.items" :key="item.id" :to="{path : '/list',query : {menuId : item.id,} }">{{item.name}}</el-breadcrumb-item>
+              <el-breadcrumb-item v-for="item of tabs.items" :key="item.id" :to="{path : '/list',query : {menuId : item.id} }">{{item.name}}</el-breadcrumb-item>
             </el-breadcrumb>
           </div>
           <ArticleList :articleList="articleList" @articleItemClicked="articleItemClicked" v-if="articleList.length > 0" @pageChanged="pageChanged" :total="total" :showCard="showCard" :pageSize="pageSize"></ArticleList>
@@ -130,7 +130,7 @@
    }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../assets/scss/common.scss";
 @import "../assets/scss/list.scss";
 </style>

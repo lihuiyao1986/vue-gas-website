@@ -46,7 +46,9 @@
            }})
          },
          contactUsClicked(){
-
+           this.$router.push({name:"contact",query:{
+              timestamp : this.moment(new Date()).format("YYYYMMDDHHmmssSSS")
+           }})
          }
        }
     }
