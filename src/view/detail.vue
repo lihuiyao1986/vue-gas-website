@@ -48,7 +48,7 @@
     },
     methods : {
       leftMenuClick(item){
-        CommonUtils.toPage(item.code,this,window);
+        CommonUtils.toPage(item.id,this,window);
       },
       ...mapActions([
         'setCurrentDetailMenuId',

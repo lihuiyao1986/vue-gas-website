@@ -96,7 +96,9 @@
           }});
         },
         leftMenuClick(item){ // 左边菜单被点击
-           this.setCurrentMenuId(item.id)
+           debugger;
+           alert(JSON.stringify(item));
+           this.setCurrentMenuId(item.id);
            this.setPageNo(1);
            CommonUtils.toPage(item.id,this,window);
         },
@@ -111,9 +113,6 @@
             pageNum : this.pageNo,
             pageSize : this.pageSize
           })
-        },
-        queryData(){
-           this.getData();
         }
      },
      created(){
@@ -121,7 +120,7 @@
      },
      watch: {
        // 如果路由有变化，会再次执行该方法
-       '$route': 'queryData'
+       '$route': 'getData'
      },
      components : {
        ArticleList,
