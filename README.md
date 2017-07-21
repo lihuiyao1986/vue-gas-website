@@ -1,4 +1,4 @@
-# 基于vue vue-router vuex构建的单页面的燃气公司官网项目
+# 基于vue+vue-router+vuex+axios构建的单页面的燃气公司官网项目
 1.ui框架使用了vue-element
 
 ## Build Setup
