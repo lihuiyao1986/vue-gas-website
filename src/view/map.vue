@@ -36,6 +36,7 @@
    import LeftMenu from '@/components/LeftMenu'
    import API from '@/http/API'
    import menus from '@/assets/js/menu'
+   import CommonUtils from '@/utils/CommonUtils'
    import {mapGetters,mapActions} from 'vuex'
    export default {
      computed : {
@@ -95,10 +96,7 @@
         ]),
         leftMenuClick(item){ // 左边菜单被点击
            this.setCurrentMenuId(item.id)
-           this.$router.push({path:'/list',query:{
-             menuId : item.id,
-             timestamp : this.moment(new Date()).format("YYYYMMDDHHmmssSSS")
-           }});
+           CommonUtils.toPage(item.id,this,window);
         },
         getData(){
           this.setCurrentMenuId("15")
@@ -109,20 +107,7 @@
           })
         },
         menuItemClicked(item){
-          if (item.code == 1) {
-            this.$router.push({name:'index'});
-          }else if(item.code == 8){
-             window.open(WebSiteInfo.OnlineBusiServiceURL);
-          }else if(item.code == 15){
-             this.$router.push({name:'map',query : {
-              timestamp : this.moment(new Date()).format("YYYYMMDDHHmmssSSS")
-             }});
-          }else{
-            this.$router.push({name:'list',query : {
-              menuId : item.code,
-              timestamp : this.moment(new Date()).format("YYYYMMDDHHmmssSSS")
-            }});
-          }
+          CommonUtils.toPage(item.code,this,window);
         }
      },
      created(){

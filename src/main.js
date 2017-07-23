@@ -10,14 +10,10 @@ import './assets/css/reset.css'
 import moment from 'moment'
 import store from './vuex/store'
 import 'babel-polyfill'
-import VueAMap from 'vue-amap';
-
-
 
 Vue.prototype.moment = moment
 Vue.config.productionTip = false
 Vue.use(ElementUI)
-Vue.use(VueAMap);
 Vue.use(VueLazyload,{
   preLoad: 1.3,
   error: 'static/img/logo.png',
@@ -26,10 +22,6 @@ Vue.use(VueLazyload,{
 })
 Vue.filter('moment', (value, formatString = 'YYYY-MM-DD')=>{
    return moment(value).format(formatString);
-});
-VueAMap.initAMapApiLoader({
-  key: '6adc329674917569a9ea9aee1ece820f',
-  plugin: ['AMap.Scale', 'AMap.OverView', 'AMap.ToolBar', 'AMap.MapType']
 });
 new Vue({
   el: '#app',

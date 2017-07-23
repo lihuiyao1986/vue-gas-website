@@ -96,8 +96,6 @@
           }});
         },
         leftMenuClick(item){ // 左边菜单被点击
-           debugger;
-           alert(JSON.stringify(item));
            this.setCurrentMenuId(item.id);
            this.setPageNo(1);
            CommonUtils.toPage(item.id,this,window);
